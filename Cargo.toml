@@ -1,0 +1,12 @@
+[package]
+name = "proxxy"
+version = "0.1.0"
+edition = "2024"
+description = "A local CONNECT proxy for learning and diagnosing HTTPS connections"
+license = "MIT"
+repository = "https://github.com/pustynsky/proxxy"
+
+[dependencies]
+httparse = "1"
+hickory-resolver = { version = "0.26.3", default-features = false, features = ["tokio", "https-ring", "webpki-roots"] }
+tokio = { version = "1", features = ["io-util", "macros", "net", "rt-multi-thread", "signal", "time"] }
